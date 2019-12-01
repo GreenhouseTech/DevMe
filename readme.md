@@ -23,6 +23,7 @@ We welcome all sorts of contributions! There are a couple ways you can help.
 - ~~Donate on Open Collective~~ (Waiting for those 100 stars. C'mon, it's free :heart_eyes:)
 
 ## Contributors
-
+<!-- ALL-CONTRIBUTORS-LIST:START -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 ## License
 This project uses the [MIT License](https://github.com/greenhousetech/devme/blob/master/license.md)
