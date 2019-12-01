@@ -14,21 +14,21 @@ html(lang="en")
             link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
             link(rel="stylesheet", href="css/style.min.css")
             link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat")
-    body(class="page-wrapper wrapper " + body_class)
-        header.page-header.col-12
+    body(class="page-wrapper " + body_class)
+        header.page-header
             a(href="/").page-header__logo
                 img(src="/assets/wordmark.svg" alt="DevMe Logo").page-header__logo-img
             nav.page-header__nav-link-wrapper
-                a(href="/about").page-header__nav-link About
-                a(href="/open").page-header__nav-link Open
-                a(href="/legal").page-header__nav-link Legal
+                a(href="/about.html").page-header__nav-link About
+                a(href="/open.html").page-header__nav-link Open
+                a(href="/legal.html").page-header__nav-link Legal
         block content
-        footer.page-footer.col-12
+        footer.page-footer
             p.page-footer__copyright Copyright © 2019 Greenhouse Tech
             .page-footer__social
                 a(href="mailto:getdevme@gmail.com").social__link
-                    img(src="/assets/icon/email.svg" alt="")
+                    img(src="/assets/icon/email.svg" alt="Email link")
                 a(href="https://github.com/greenhousetech/devme").social__link
-                    img(src="/assets/icon/github.svg" alt="")
+                    img(src="/assets/icon/github.svg" alt="GitHub link")
                 a(href="https://twitter.com/getdevme").social__link
-                    img(src="/assets/icon/twitter.svg" alt="")
+                    img(src="/assets/icon/twitter.svg" alt="Twitter link")

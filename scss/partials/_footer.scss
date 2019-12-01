@@ -1,19 +1,10 @@
 .page-footer {
-    display: grid;
+    max-height: 56px;
+    margin: 12px 0 24px 0;
 
     border-top: 1px solid $black;
     text-align: center;
-    align-items: center;
-    justify-items: center;
-
-    &__copyright {
-        grid-column: 5/9;
-        justify-content: space-around;
-    }
-
-    &__social {
-        grid-column: 9/13;
-    }
+    
    .social__link {
         text-decoration: none;
         margin: 0 12px;

@@ -40,7 +40,7 @@ function assets(cb) {
 
 function watch(cb) {
     gulp.watch('(templates|views)/**/*.pug', html)
-    gulp.watch("sass/**/*.scss", css)
+    gulp.watch("scss/**/*.scss", css)
     gulp.watch("assets", assets)
     cb();
 }

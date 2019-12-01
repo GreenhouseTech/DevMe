@@ -9,16 +9,24 @@ body {
     flex-direction: column;
 }
 
-.page--home {
-    background-image: url(/assets/img/bg_1.svg);
-}
-
 .page-wrapper {
     background-position: top center;
     background-size: 100vw;
     background-repeat: no-repeat;
 }
 
+.page--home {
+    background-image: url(/assets/img/bg_1.svg)
+}
+.page--open {
+    background-image: url(/assets/img/header.svg);
+    background-size: auto;
+}
+
+.media {
+    width: 100%;
+}
 main, section {
-    margin: 56px 0;
+    margin: 128px 0;
+    flex-grow: 1;
 }
