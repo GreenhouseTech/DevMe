@@ -1,0 +1,40 @@
+.wrapper {
+    display: grid;
+    margin-right: 36px;
+    margin-left: 36px;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 36px;
+
+    @media only screen and (max-width: 960px) and (min-width: 480px) {
+        margin-left: 24px;
+        margin-right: 24px;
+        column-gap: 24px;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    @media only screen and (max-width: 479px) {
+        margin-left: 16px;
+        margin-right: 16px;
+        column-gap: 16px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+$i: 1;
+$cols: 12;
+
+@while $i <= $cols {
+    .col-#{$i} {
+        grid-column-end: span $i;
+    }
+
+    .offset-#{$i} {
+        grid-column-start: $i + 1;
+    }
+
+    $i: $i + 1;
+}
+
+.row-span {
+    grid-row: 1/13;
+}

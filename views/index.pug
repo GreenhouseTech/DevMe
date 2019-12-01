@@ -1,0 +1,20 @@
+//- index.pug
+
+extends ../templates/main.pug
+
+block append variables
+    - var body_class = "page--home"
+
+block content
+    main.col-10.offset-1.wrapper
+        h1.text--large.col-6 DevMe
+        p.text--subsub-heading.col-6 A (free) universal profile for developers. Show off your projects, education, or geekiness.
+        button.btn.col-6 Claim your Profile
+        img(src="https://via.placeholder.com/700x500/4E5561?text=Placeholder+Image" alt="").col-6
+    section.col-10.offset-1.wrapper.text--center
+        .col-6
+            h2 Your Project
+            p What are your current hacks? Tell everyone what you're working on right now. Got a startup? There's no better place to promote it.</p>
+        .col-6
+            h2 Your Story
+            p Everyone has a unique past and personality. Tell the world your hobbies and interests. Show off your education and work history.

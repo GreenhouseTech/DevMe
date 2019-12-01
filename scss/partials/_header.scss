@@ -1,0 +1,14 @@
+.page-header {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo-img {
+        height: 24px;
+    }
+
+    &__nav-link {
+        margin: 0 12px;
+    }
+}

@@ -1,1 +1,5 @@
 language: node_js
+
+scripts: npm run pack
+
+after_success: chmod +x ./scripts/deploy.sh && ./scripts/deploy.sh

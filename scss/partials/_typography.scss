@@ -1,0 +1,51 @@
+.text {
+    &--large { font-size: 48px; }
+    &--title { font-size: 32px; }
+}
+
+h1, .text--heading {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+h2, .text--sub-heading {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+h3, .text--subsub-heading {
+    font-size: 21px;
+    font-weight: normal;
+}
+
+h4, h5, h6 {
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.text {
+    &--bigger { font-size: 19px; }
+    &--smaller { font-size: 14px; }
+}
+
+// Alignment
+.text--center {
+    text-align: center;
+}
+
+// Hyperlinks
+a {
+    color: $black;
+    & .icon {
+        width: 24px;
+    }
+
+    &:hover {
+        color: lighten($black, 20)
+    }
+
+    &:active {
+        color: darken($black, 30);
+        text-decoration: none;
+    }
+}
