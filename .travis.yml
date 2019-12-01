@@ -9,6 +9,6 @@ scripts: npm run pack
 deploy:
   provider: netlify
   site: devme
-  auth: NETLIFY_AUTH
+  auth: $NETLIFY_AUTH
   dir: dist
   edge: true
