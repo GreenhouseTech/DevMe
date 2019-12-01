@@ -1,4 +1,5 @@
 ![DevMe: A universal profile for developers](https://github.com/greenhousetech/devme/blob/master/assets/post-small.png)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Build Status](https://img.shields.io/travis/GreenhouseTech/DevMe/master.svg?style=flat-square)](https://travis-ci.org/GreenhouseTech/DevMe)
 
@@ -24,6 +25,22 @@ We welcome all sorts of contributions! There are a couple ways you can help.
 
 ## Contributors
 <!-- ALL-CONTRIBUTORS-LIST:START -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://binyam.in"><img src="https://avatars3.githubusercontent.com/u/39805353?v=4" width="100px;" alt="Binyamin Aron Green"/><br /><sub><b>Binyamin Aron Green</b></sub></a><br /><a href="#design-b3u" title="Design">🎨</a> <a href="https://github.com/GreenhouseTech/DevMe/commits?author=b3u" title="Code">💻</a> <a href="#ideas-b3u" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-b3u" title="Project Management">📆</a> <a href="#business-b3u" title="Business development">💼</a> <a href="#maintenance-b3u" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 ## License
 This project uses the [MIT License](https://github.com/greenhousetech/devme/blob/master/license.md)
