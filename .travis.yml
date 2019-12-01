@@ -1,7 +1,12 @@
 language: node_js
 
-node_js: "7"
+node_js: "8"
 
 script: npm run pack
 
-after_success: chmod +x ./scripts/deploy.sh && ./scripts/deploy.sh
+deploy:
+  provider: netlify
+  site: devme
+  auth: $NETLIFY_AUTH
+  dir: dist
+  edge: true # opt in to dpl v2
