@@ -1,0 +1,29 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "b3u",
+      "name": "Binyamin Aron Green",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/39805353?v=4",
+      "profile": "https://binyam.in",
+      "contributions": [
+        "design",
+        "code",
+        "ideas",
+        "projectManagement",
+        "business",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "DevMe",
+  "projectOwner": "GreenhouseTech",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
