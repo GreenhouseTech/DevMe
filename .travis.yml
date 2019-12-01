@@ -6,7 +6,7 @@ script: npm run pack
 
 deploy:
   provider: netlify
-  site: devme
+  site: "63089d2f-46a6-40e5-a019-d957c172b2f2"
   auth: $NETLIFY_AUTH
   dir: dist
   edge: true # opt in to dpl v2
