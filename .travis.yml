@@ -2,13 +2,6 @@ language: node_js
 
 node_js: "7"
 
-before_script: npm install -g gulp-cli
+script: npm run pack
 
-scripts: npm run pack
-
-deploy:
-  provider: netlify
-  site: devme
-  auth: $NETLIFY_AUTH
-  dir: dist
-  edge: true
+after_success: chmod +x ./scripts/deploy.sh && ./scripts/deploy.sh
