@@ -5,7 +5,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![License](https://img.shields.io/github/license/greenhousetech/devme.svg?style=flat-square)](https://github.com/greenhousetech/devme/blob/master/license.md)
 [![Tweet @GetDevMe](https://img.shields.io/badge/Twitter-@GetDevMe-55acee.svg?logo=twitter&logoColor=55acee&style=flat-square)](https://twitter.com/getdevme)
-[![Open-Source with Love](https://img.shields.io/badge/Open%20Source-with%20🤍-d15d27.svg?style=flat-square&labelColor=e36d25&logoColor=white&logo=open-source-initiative)](https://opensource.org/)
+[![Open-Source with Love](https://img.shields.io/badge/Open%20Source-with%20❤-d15d27.svg?style=flat-square&labelColor=e36d25&logoColor=white&logo=open-source-initiative)](https://opensource.org/)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
