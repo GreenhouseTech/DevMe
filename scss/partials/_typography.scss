@@ -29,8 +29,16 @@ h4, h5, h6 {
 }
 
 // Alignment
+.text--left {
+    text-align: left;
+}
+
 .text--center {
     text-align: center;
+}
+
+.text--right {
+    text-align: right;
 }
 
 // Hyperlinks

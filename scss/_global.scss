@@ -10,23 +10,21 @@ body {
 }
 
 .page-wrapper {
+    background-image: url(/assets/img/header.svg);
+    background-size: auto;
     background-position: top center;
-    background-size: 100vw;
     background-repeat: no-repeat;
 }
 
 .page--home {
-    background-image: url(/assets/img/bg_1.svg)
-}
-.page--open {
-    background-image: url(/assets/img/header.svg);
-    background-size: auto;
+    background-image: url(/assets/img/bg_1.svg);
+    background-size: 100vw;
 }
 
 .media {
     width: 100%;
 }
-main, section {
+main, section:not(.section--default) {
     margin: 128px 0;
     flex-grow: 1;
 }

@@ -1,0 +1,11 @@
+//- privacy.pug
+
+extends ../../templates/main.pug
+
+block append variables
+    - var page_title = "Privacy Policy"
+
+block content
+    main.wrapper
+        .col-10.offset-1
+            include:markdown-it ../../privacy.md
