@@ -1,0 +1,11 @@
+//- terms-of-service.pug
+
+extends ../../templates/main.pug
+
+block append variables
+    - var page_title = "Terms of Service"
+
+block content
+    main.wrapper
+        .col-10.offset-1
+            include:markdown-it ../../tos.md
