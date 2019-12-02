@@ -1,6 +1,7 @@
 ![DevMe: A universal profile for developers](https://github.com/greenhousetech/devme/blob/master/assets/post-small.png)
 
 [![Build Status](https://img.shields.io/travis/GreenhouseTech/DevMe/master.svg?style=flat-square)](https://travis-ci.org/GreenhouseTech/DevMe)
+[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/GreenhouseTech/DevMe?logo=code-climate&style=flat-square)](https://codeclimate.com/github/GreenhouseTech/DevMe/maintainability)
 [![Coming Soon](https://img.shields.io/badge/Status-Coming%20Soon!-58B27D.svg?style=flat-square)](https://binyam.in/devme)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![License](https://img.shields.io/github/license/greenhousetech/devme.svg?style=flat-square)](https://github.com/greenhousetech/devme/blob/master/license.md)
