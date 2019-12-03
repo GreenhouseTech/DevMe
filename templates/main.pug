@@ -20,7 +20,7 @@ html(lang="en")
             link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
             link(rel="stylesheet", href="/css/style.min.css")
             script(defer, src="/js/bundle.min.js")
-            link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat")
+            link(rel="stylesheet", async, href="https://fonts.googleapis.com/css?family=Montserrat&display=swap")
             script.
                 window.$crisp=[];
                 window.CRISP_WEBSITE_ID="7f5b7db2-a8d0-4996-88ba-687b557af654";
@@ -32,12 +32,15 @@ html(lang="en")
                     d.getElementsByTagName("head")[0].appendChild(s);
                 })();
             unless page_profile
+                //- Google Analytics
                 script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-119385435-5")
                 script.
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                     gtag('config', 'UA-119385435-5');
+                link(rel="preconnect" href="http://www.googletagmanager.com")
+                link(rel="preconnect" href="https://www.google-analytics.com")
     body(class="page-wrapper " + body_class)
         header.page-header
             a(href="/").page-header__logo
@@ -46,18 +49,18 @@ html(lang="en")
                 span.hamburger__bar
                 span.hamburger__bar
                 span.hamburger__bar
-            nav(role="navigation menu")#nav.nav-wrapper.js-nav-wrapper
-                a(href="/about.html", role="menuitem").nav__link About
-                a(href="/open.html", role="menuitem").nav__link Open
-                a(href="/legal.html", role="menuitem").nav__link Legal
+            nav#nav.nav-wrapper.js-nav-wrapper
+                a(href="/about.html").nav__link About
+                a(href="/open.html").nav__link Open
+                a(href="/legal.html").nav__link Legal
         block content
         footer.page-footer
             hr
             small.copyright Copyright 2019 by Greenhouse Tech
             .page-footer__social
-                a(href="mailto:getdevme@gmail.com", rel="external nofollow").social__link
+                a.social__link(href="mailto:getdevme@gmail.com", rel="external nofollow", aria-label="Email Us")
                     include ../assets/icon/email.svg
-                a(href="https://github.com/greenhousetech/devme", rel="external nofollow").social__link
+                a.social__link(href="https://github.com/greenhousetech/devme", rel="external nofollow", aria-label="Find us on GitHub")
                     include ../assets/icon/github.svg
-                a(href="https://twitter.com/getdevme", rel="external nofollow").social__link
+                a.social__link(href="https://twitter.com/getdevme", rel="external nofollow", aria-label="Find us on Twitter")
                     include ../assets/icon/twitter.svg
