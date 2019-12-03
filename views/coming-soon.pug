@@ -28,6 +28,12 @@ html(lang="en")
                     s.async=1;
                     d.getElementsByTagName("head")[0].appendChild(s);
                 })();
+            script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-119385435-5")
+            script.
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-119385435-5');
     body.page-wrapper
         header.page-header
             img(src="/assets/wordmark.svg" alt="DevMe").page-header__logo-img
