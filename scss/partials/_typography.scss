@@ -1,5 +1,11 @@
 .text {
-    &--large { font-size: 48px; }
+    &--large {
+        font-size: 48px;
+        
+        @media only screen and (max-width: 479px) {
+            font-size: 32px;
+        }
+    }
     &--title { font-size: 32px; }
 }
 

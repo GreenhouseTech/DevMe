@@ -18,21 +18,36 @@ html(lang="en")
             link(rel="stylesheet", href="/css/style.min.css")
             script(defer, src="/js/bundle.min.js")
             link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat")
+            script.
+                window.$crisp=[];
+                window.CRISP_WEBSITE_ID="7f5b7db2-a8d0-4996-88ba-687b557af654";
+                (function(){
+                    d=document;
+                    s=d.createElement("script");
+                    s.src="https://client.crisp.chat/l.js";
+                    s.async=1;
+                    d.getElementsByTagName("head")[0].appendChild(s);
+                })();
     body(class="page-wrapper " + body_class)
         header.page-header
             a(href="/").page-header__logo
-                img(src="/assets/wordmark.svg" alt="DevMe Logo").page-header__logo-img
-            nav.page-header__nav-link-wrapper
-                a(href="/about.html").page-header__nav-link About
-                a(href="/open.html").page-header__nav-link Open
-                a(href="/legal.html").page-header__nav-link Legal
+                img(src="/assets/wordmark.svg" alt="Home").page-header__logo-img
+            a(href="#", role="button", hidden, aria-hidden=true, aria-label="Toggle Menu", aria-controls="nav")#hamburger.hamburger.js-hamburger
+                span.hamburger__bar
+                span.hamburger__bar
+                span.hamburger__bar
+            nav(role="navigation menu")#nav.nav-wrapper.js-nav-wrapper
+                a(href="/about.html", role="menuitem").nav__link About
+                a(href="/open.html", role="menuitem").nav__link Open
+                a(href="/legal.html", role="menuitem").nav__link Legal
         block content
         footer.page-footer
-            p.page-footer__copyright Copyright © 2019 Greenhouse Tech
+            hr
+            small.copyright Copyright 2019 by Greenhouse Tech
             .page-footer__social
-                a(href="mailto:getdevme@gmail.com").social__link
-                    img(src="/assets/icon/email.svg" alt="Email link")
-                a(href="https://github.com/greenhousetech/devme").social__link
-                    img(src="/assets/icon/github.svg" alt="GitHub link")
-                a(href="https://twitter.com/getdevme").social__link
-                    img(src="/assets/icon/twitter.svg" alt="Twitter link")
+                a(href="mailto:getdevme@gmail.com", rel="external nofollow").social__link
+                    include ../assets/icon/email.svg
+                a(href="https://github.com/greenhousetech/devme", rel="external nofollow").social__link
+                    include ../assets/icon/github.svg
+                a(href="https://twitter.com/getdevme", rel="external nofollow").social__link
+                    include ../assets/icon/twitter.svg

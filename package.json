@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A Universal Profile for devs",
   "scripts": {
-    "start": "gulp watch",
+    "start": "gulp pack && gulp watch",
+    "watch": "gulp watch",
     "pack": "gulp pack"
   },
   "repository": {

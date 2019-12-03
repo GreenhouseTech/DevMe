@@ -25,12 +25,32 @@
     align-content: center;
 }
 
-$i: 1;
-$cols: 12;
+.col-all {
+    grid-column: 1 / 13;
 
-@while $i <= $cols {
-    .col-#{$i} {
+    @media only screen and (max-width: 960px) and (min-width: 480px) {
+        grid-column: 1 / 9;
+    }
+
+    @media only screen and (max-width: 479px) {
+        grid-column: 1 / 5;
+    }
+}
+
+$i: 1;
+@while $i <= 12 {
+    .lg-#{$i} {
         grid-column-end: span $i;
+    }
+
+    .lg-#{$i}--center {
+        grid-column-start: (((12 - $i) / 2) + 1);
+        grid-column-end: (0 - (((12 - $i) / 2) + 1));
+
+        @media only screen and (max-width: 960px) and (min-width: 480px) {
+            grid-column-start: (((8 - $i) / 2) + 1);
+            grid-column-end: (0 - (((8 - $i) / 2) + 1));
+        }
     }
 
     .offset-#{$i} {
@@ -38,4 +58,51 @@ $cols: 12;
     }
 
     $i: $i + 1;
+}
+
+$j: 1;
+@while $j <= 8 {
+    @media only screen and (max-width: 960px) and (min-width: 480px) {
+        .md-#{$j} {
+            grid-column-start: 1;
+            grid-column-end: span $j;
+        }
+
+        .md-#{$j}--center {
+            grid-column-start: (((8 - $j) / 2) + 1);
+            grid-column-end: (0 - (((8 - $j) / 2) + 1));
+        }
+
+        .offset-#{$j}--md {
+            grid-column-start: $j + 1;
+        }
+    }
+
+    $j: $j + 1;
+}
+
+$k: 1;
+@while $k <= 4 {
+    @media only screen and (max-width: 479px) {
+        .sm-#{$k} {
+            grid-column-start: 1;
+            grid-column-end: span $k;
+        }
+
+        .sm-#{$k}--center {
+            grid-column-start: (((4 - $k) / 2) + 1);
+            grid-column-end: (0 - (((4 - $k) / 2) + 1));
+        }
+
+        .offset-#{$k}--sm {
+            grid-column-start: $k + 1;
+        }
+    }
+    $k: $k + 1;
+}
+
+@media only screen and (max-width: 479px) {
+    .offset-0--sm {
+        grid-column-start: 1;
+    }
 }

@@ -1,0 +1,34 @@
+.form {
+    &--single-input {
+        position: relative;
+        display: inline-flex;
+        border: 1px solid $accent;
+        
+        input, button {
+            border: none;
+            background: transparent;
+            font-size: 14px;
+            font-family: $font-stack;
+            border-radius: 0;
+        }
+        
+        input {
+            padding: 4px 0 4px 8px;
+            border-right: 1px solid $accent;
+            height: 36px - 8px;
+            width: 256px;
+        }
+        button {
+            background-color: $accent;
+            width: 36px;
+            cursor: pointer;
+
+            svg {fill: $white;}
+
+            &:hover {
+                background-color: transparent;
+                svg {fill: $accent}
+            }
+        }
+    }
+}

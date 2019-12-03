@@ -6,16 +6,19 @@ block append variables
     - var body_class = "page--home"
 
 block content
-    main.wrapper
-        .col-6
-            h1.text--large DevMe
-            p.text--subsub-heading A (free) universal profile for developers. Show off your projects, education, or geekiness.
-            button.btn Claim your Profile
-        img.media(src="https://via.placeholder.com/700x500/4E5561?text=Placeholder+Image" alt="").col-6
-    section.col-10.offset-1.wrapper.text--center
-        .col-6
-            h2 Your Project
-            p What are your current hacks? Tell everyone what you're working on right now. Got a startup? There's no better place to promote it.</p>
-        .col-6
-            h2 Your Story
-            p Everyone has a unique past and personality. Tell the world your hobbies and interests. Show off your education and work history.
+    main.main--default
+        .wrapper
+            section.wrapper.lg-12.md-8.sm-4
+                .lg-6.md-8.sm-4
+                    h1.text--large All your socials. One Page.
+                    p.text--sub-heading A (free) universal profile for developers. Show off your projects, education, or geekiness.
+                    button.btn Claim your Profile
+                img.media(src="/assets/img/placeholder.svg" alt="").lg-6.md-8.sm-4
+                //- img.media(src="https://via.placeholder.com/700x500/4E5561?text=Placeholder+Image" alt="").lg-6.md-8.sm-4
+            section.wrapper.lg-10.offset-1.md-8.sm-4
+                .lg-6.md-8.sm-4.text--center
+                    h2 Your Project
+                    p What are your current hacks? Tell everyone what you're working on right now. Got a startup? There's no better place to promote it.</p>
+                .lg-6.md-8.sm-4.text--center
+                    h2 Your Story
+                    p Everyone has a unique past and personality. Tell the world your hobbies and interests. Show off your education and work history.

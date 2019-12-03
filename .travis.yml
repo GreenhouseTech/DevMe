@@ -1,4 +1,8 @@
-branches: only: stable
+branches:
+  only:
+    - stable
+    - master
+    - "/^feature\/.+/"
 
 language: node_js
 
@@ -6,9 +10,11 @@ node_js: "8"
 
 script: npm run pack
 
-deploy:
-  provider: netlify
-  site: 63089d2f-46a6-40e5-a019-d957c172b2f2
-  auth: $NETLIFY_AUTH
-  dir: dist
-  edge: true # opt in to dpl v2
+# deploy:
+#   provider: netlify
+#   site: 63089d2f-46a6-40e5-a019-d957c172b2f2
+#   auth: $NETLIFY_AUTH
+#   dir: dist
+#   edge: true # opt in to dpl v2
+#   on:
+#     branch: stable
