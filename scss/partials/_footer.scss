@@ -1,11 +1,12 @@
 .page-footer {
-    max-height: 56px;
-    margin: 12px 0 24px 0;
-
-    border-top: 1px solid $black;
+    margin: 0 36px;
+    padding: 16px 0;
     text-align: center;
-    
-   .social__link {
+    .copyright {
+        margin-bottom: 8px;
+        display: block;
+    }
+    .social__link {
         text-decoration: none;
         margin: 0 12px;
     }

@@ -1,0 +1,14 @@
+//- center.pug
+
+extends ./main.pug
+
+block append variables
+    block variables
+    
+block append head
+    block head
+
+block append content
+    main.wrapper.text--center
+        .lg-8--center.md-6--center.sm-4
+            block content

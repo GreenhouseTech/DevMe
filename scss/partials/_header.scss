@@ -1,14 +1,56 @@
 .page-header {
-    height: 56px;
+    margin: 16px 36px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &__logo-img {
-        height: 24px;
+        height: 36px;
     }
 
-    &__nav-link {
+    .hamburger {
+        display: none;
+    }
+
+    .nav__link {
         margin: 0 12px;
+    }
+    @media only screen and (max-width: 479px) {
+        .nav-wrapper {
+            overflow: hidden;
+            background-color: $white;
+            height: 0;
+            padding: 0 12px;
+            position: absolute;
+            top: 68px;
+            left: 0;
+            right: 0;
+            
+            transition: height .7s ease, padding .3s ease;
+            
+            .nav__link {
+                display: block;
+                margin: 12px 0;
+            }
+            
+            &.is-nav-open {
+                height: 113px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+        }
+        
+        .hamburger {
+            display: block;
+        }
+
+        .hamburger__bar {
+            height: 4px;
+            width: 36px;
+            display: block;
+            background-color: $black;
+            margin: 8px 0;
+        }
     }
 }

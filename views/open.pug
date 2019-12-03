@@ -1,15 +1,13 @@
 //- open.pug
 
-extends ../templates/main.pug
+extends ../templates/center.pug
 
 block append variables
     - var page_title = "Open Source"
 
 block content
-    main.wrapper--center.text--center
-        .col-4.offset-4
-            h1 DevMe is Open-Source and Free
-            p <b>It's open-source.</b> That means any developer can contribute to our project, or learn from it. Let's work together to build a brighter future.
-            p <b>It's free.</b> We're committed to giving you the attention that you deserve, so we can't be bothered by little thing like money.
-            br
-            a.btn(href="https://github.com/greenhousetech/devme") Contribute
+    h1 DevMe is Open-Source and Free
+    p <b>It's open-source.</b> That means any developer can contribute to our project, or learn from it. Let's work together to build a brighter future.
+    p <b>It's free.</b> We're committed to giving you the attention that you deserve, so we can't be bothered by little thing like money.
+    br
+    a.btn(href="https://github.com/greenhousetech/devme", rel="external nofollow") Contribute

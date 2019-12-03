@@ -19,20 +19,25 @@ html(lang="en")
             script(defer, src="/js/bundle.min.js")
             link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat")
     body(class="page-wrapper " + body_class)
-        header.page-header
+        header(role="banner").page-header
             a(href="/").page-header__logo
-                img(src="/assets/wordmark.svg" alt="DevMe Logo").page-header__logo-img
-            nav.page-header__nav-link-wrapper
-                a(href="/about.html").page-header__nav-link About
-                a(href="/open.html").page-header__nav-link Open
-                a(href="/legal.html").page-header__nav-link Legal
+                img(src="/assets/wordmark.svg" alt="Home").page-header__logo-img
+            a(href="#", role="button", hidden, aria-hidden=true aria-label="Toggle Menu", aria-controls="nav")#hamburger.hamburger.js-hamburger
+                span.hamburger__bar
+                span.hamburger__bar
+                span.hamburger__bar
+            nav(role="navigation")#nav.nav-wrapper.js-nav-wrapper
+                a(href="/about.html").nav__link About
+                a(href="/open.html").nav__link Open
+                a(href="/legal.html").nav__link Legal
         block content
-        footer.page-footer
-            p.page-footer__copyright Copyright © 2019 Greenhouse Tech
+        footer(role="contentInfo").page-footer
+            hr
+            small.copyright Copyright 2019 by Greenhouse Tech
             .page-footer__social
-                a(href="mailto:getdevme@gmail.com").social__link
-                    img(src="/assets/icon/email.svg" alt="Email link")
-                a(href="https://github.com/greenhousetech/devme").social__link
-                    img(src="/assets/icon/github.svg" alt="GitHub link")
-                a(href="https://twitter.com/getdevme").social__link
-                    img(src="/assets/icon/twitter.svg" alt="Twitter link")
+                a(href="mailto:getdevme@gmail.com", rel="external nofollow").social__link
+                    img(src="/assets/icon/email.svg", alt="Email Us")
+                a(href="https://github.com/greenhousetech/devme", rel="external nofollow").social__link
+                    img(src="/assets/icon/github.svg", alt="See us on GitHub")
+                a(href="https://twitter.com/getdevme", rel="external nofollow").social__link
+                    img(src="/assets/icon/twitter.svg" alt="See us on Twitter")
