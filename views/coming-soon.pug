@@ -1,0 +1,57 @@
+//- Coming Soon.pug
+
+doctype html
+html(lang="en")
+    head
+        block head
+            meta(charset="UTF-8")
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            meta(http-equiv="X-UA-Compatible", content="ie=edge")
+            title Coming Soon | DevMe - A Universal Profile for Developers
+            link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
+            link(rel="stylesheet", href="/css/style.min.css")
+            script(defer, src="/js/bundle.min.js")
+            link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat")
+            script.
+                window.$crisp=[];
+                window.CRISP_WEBSITE_ID="7f5b7db2-a8d0-4996-88ba-687b557af654";
+                (function(){
+                    d=document;
+                    s=d.createElement("script");
+                    s.src="https://client.crisp.chat/l.js";
+                    s.async=1;
+                    d.getElementsByTagName("head")[0].appendChild(s);
+                })();
+    body.page-wrapper
+        header.page-header
+            img(src="/assets/wordmark.svg" alt="DevMe").page-header__logo-img
+            a(href="#", role="button", hidden, aria-hidden=true, aria-label="Toggle Menu", aria-controls="nav")#hamburger.hamburger.js-hamburger
+                span.hamburger__bar
+                span.hamburger__bar
+                span.hamburger__bar
+            nav(role="navigation menu")#nav.nav-wrapper.js-nav-wrapper
+                a(href="https://github.com/greenhousetech/devme", rel="external nofollow", role="menuitem").nav__link
+                    include ../assets/icon/github.svg
+                a(href="https://twitter.com/getdevme", rel="external nofollow", role="menuitem").nav__link
+                    include ../assets/icon/twitter.svg
+        main.main--default
+            .wrapper
+                section.wrapper.lg-12.md-8.sm-4
+                    .lg-6.md-8.sm-4
+                        h2.text--title Coming Soon
+                        h1.text--large All your socials. One Page.
+                        p.text--bigger A free, universal profile for developers. Show off your projects, education, or geekiness.
+                        form.form--single-input(action="https://tinyletter.com/DevMe", method="post", target="popupwindow", onsubmit="window.open('https://tinyletter.com/DevMe', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true")
+                            input(type="email", required, placeholder="Email me updates", aria-label="Email me updates", name="email", id="tlemail")
+                            button(type="submit") <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20,4H4C2.896,4,2,4.896,2,6v12c0,1.104,0.896,2,2,2h16c1.104,0,2-0.896,2-2V6C22,4.896,21.104,4,20,4z M20,8.7l-8,5.334 L4,8.7V6.297l8,5.333l8-5.333V8.7z"/></svg>
+                    img.media.lg-6.md-8.sm-4(src="/assets/img/placeholder.svg" alt="")
+                section.wrapper.lg-10.offset-1.md-8.sm-4
+                    .lg-6.md-8.sm-4.text--center
+                        h2 Your Project
+                        p What are your current hacks? Tell everyone what you're working on right now. Got a startup? There's no better place to promote it.</p>
+                    .lg-6.md-8.sm-4.text--center
+                        h2 Your Story
+                        p Everyone has a unique past and personality. Tell the world your hobbies and interests. Show off your education and work history.
+        footer.page-footer
+            hr
+            small.copyright Copyright 2019 by Greenhouse Tech

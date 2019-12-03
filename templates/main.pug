@@ -29,25 +29,25 @@ html(lang="en")
                     d.getElementsByTagName("head")[0].appendChild(s);
                 })();
     body(class="page-wrapper " + body_class)
-        header(role="banner").page-header
+        header.page-header
             a(href="/").page-header__logo
                 img(src="/assets/wordmark.svg" alt="Home").page-header__logo-img
             a(href="#", role="button", hidden, aria-hidden=true, aria-label="Toggle Menu", aria-controls="nav")#hamburger.hamburger.js-hamburger
                 span.hamburger__bar
                 span.hamburger__bar
                 span.hamburger__bar
-            nav(role="navigation")#nav.nav-wrapper.js-nav-wrapper
-                a(href="/about.html").nav__link About
-                a(href="/open.html").nav__link Open
-                a(href="/legal.html").nav__link Legal
+            nav(role="navigation menu")#nav.nav-wrapper.js-nav-wrapper
+                a(href="/about.html", role="menuitem").nav__link About
+                a(href="/open.html", role="menuitem").nav__link Open
+                a(href="/legal.html", role="menuitem").nav__link Legal
         block content
-        footer(role="contentInfo").page-footer
+        footer.page-footer
             hr
             small.copyright Copyright 2019 by Greenhouse Tech
             .page-footer__social
                 a(href="mailto:getdevme@gmail.com", rel="external nofollow").social__link
-                    img(src="/assets/icon/email.svg", alt="Email Us")
+                    include ../assets/icon/email.svg
                 a(href="https://github.com/greenhousetech/devme", rel="external nofollow").social__link
-                    img(src="/assets/icon/github.svg", alt="See us on GitHub")
+                    include ../assets/icon/github.svg
                 a(href="https://twitter.com/getdevme", rel="external nofollow").social__link
-                    img(src="/assets/icon/twitter.svg" alt="See us on Twitter")
+                    include ../assets/icon/twitter.svg
