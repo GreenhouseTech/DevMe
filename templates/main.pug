@@ -2,10 +2,13 @@
 
 block variables
     - var body_class = ""
+    - var site_title = "DevMe - A Universal Profile for Developers"
+    - var site_desc = "All your socials on one Page. Stay tuned for updates."
 
 doctype html
 html(lang="en")
     head
+        include ../templates/seo.pug
         block head
             meta(charset="UTF-8")
             meta(name="viewport", content="width=device-width, initial-scale=1.0")
