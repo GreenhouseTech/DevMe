@@ -18,11 +18,21 @@ html(lang="en")
             link(rel="stylesheet", href="/css/style.min.css")
             script(defer, src="/js/bundle.min.js")
             link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat")
+            script.
+                window.$crisp=[];
+                window.CRISP_WEBSITE_ID="7f5b7db2-a8d0-4996-88ba-687b557af654";
+                (function(){
+                    d=document;
+                    s=d.createElement("script");
+                    s.src="https://client.crisp.chat/l.js";
+                    s.async=1;
+                    d.getElementsByTagName("head")[0].appendChild(s);
+                })();
     body(class="page-wrapper " + body_class)
         header(role="banner").page-header
             a(href="/").page-header__logo
                 img(src="/assets/wordmark.svg" alt="Home").page-header__logo-img
-            a(href="#", role="button", hidden, aria-hidden=true aria-label="Toggle Menu", aria-controls="nav")#hamburger.hamburger.js-hamburger
+            a(href="#", role="button", hidden, aria-hidden=true, aria-label="Toggle Menu", aria-controls="nav")#hamburger.hamburger.js-hamburger
                 span.hamburger__bar
                 span.hamburger__bar
                 span.hamburger__bar
