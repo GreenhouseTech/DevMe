@@ -11,6 +11,10 @@
   from = "/"
   to = "/coming-soon"
 
+[[redirects]]
+  from = "/progress"
+  to = "https://headwayapp.co/devme-changelog"
+  
 [build.processing]
   skip_processing = false
 [build.processing.css]

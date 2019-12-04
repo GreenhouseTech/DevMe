@@ -1,8 +1,14 @@
 //- Coming Soon.pug
+block variables
+    - var page_title = "Coming Soon"
+    - var site_title = "DevMe - A Universal Profile for Developers"
+    - var site_desc = "All your socials on one Page. Stay tuned for updates."
+    - var url = "https://devme.netlify.com"
 
 doctype html
 html(lang="en")
     head
+        include ../templates/seo.pug
         block head
             meta(charset="UTF-8")
             meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -11,8 +17,10 @@ html(lang="en")
             link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
             link(rel="stylesheet", href="/css/style.min.css")
             script(defer, src="/js/bundle.min.js")
-            link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat")
-            script.
+            link(rel="stylesheet", async, href="https://fonts.googleapis.com/css?family=Montserrat&display=swap")
+
+            //- Crisp Live Chat
+            script(type="text/x-metomic", data-micropolicy="chat").
                 window.$crisp=[];
                 window.CRISP_WEBSITE_ID="7f5b7db2-a8d0-4996-88ba-687b557af654";
                 (function(){
@@ -22,6 +30,24 @@ html(lang="en")
                     s.async=1;
                     d.getElementsByTagName("head")[0].appendChild(s);
                 })();
+
+            //- Google Analytics
+            script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-119385435-5")
+            link(rel="preconnect" href="https://www.googletagmanager.com")
+            link(rel="preconnect" href="https://www.google-analytics.com")
+            script(type="text/x-metomic", data-micropolicy="statistics").
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-119385435-5');
+
+            //- Metomic Cookie Banner
+            script.
+                !(function(p,r,i,v,a,c,y){p['MetomicObject']=a;p[a]=p[a]||function(){
+                (p[a].q=p[a].q||[]).push(arguments)},p[a].l=1*new Date();c=r.createElement(i),
+                y=r.getElementsByTagName(i)[0];c.async=1;c.src=v+'?d='+r.location.host;y.parentNode.insertBefore(c,y)
+                })(window, document, 'script', 'https://consent-manager.metomic.io/embed.js', 'Metomic');
+                Metomic('load', { projectId: 'prj:ec60d992-8d78-4d43-83a4-0e413628941f' });
     body.page-wrapper
         header.page-header
             img(src="/assets/wordmark.svg" alt="DevMe").page-header__logo-img
@@ -29,10 +55,10 @@ html(lang="en")
                 span.hamburger__bar
                 span.hamburger__bar
                 span.hamburger__bar
-            nav(role="navigation menu")#nav.nav-wrapper.js-nav-wrapper
-                a(href="https://github.com/greenhousetech/devme", rel="external nofollow", role="menuitem").nav__link
+            nav#nav.nav-wrapper.js-nav-wrapper
+                a.nav__link(href="https://github.com/greenhousetech/devme", rel="external nofollow", aria-label="Find us on GitHub")
                     include ../assets/icon/github.svg
-                a(href="https://twitter.com/getdevme", rel="external nofollow", role="menuitem").nav__link
+                a.nav__link(href="https://twitter.com/getdevme", rel="external nofollow", aria-label="Find us on Twitter")
                     include ../assets/icon/twitter.svg
         main.main--default
             .wrapper
@@ -43,7 +69,8 @@ html(lang="en")
                         p.text--bigger A free, universal profile for developers. Show off your projects, education, or geekiness.
                         form.form--single-input(action="https://tinyletter.com/DevMe", method="post", target="popupwindow", onsubmit="window.open('https://tinyletter.com/DevMe', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true")
                             input(type="email", required, placeholder="Email me updates", aria-label="Email me updates", name="email", id="tlemail")
-                            button(type="submit") <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20,4H4C2.896,4,2,4.896,2,6v12c0,1.104,0.896,2,2,2h16c1.104,0,2-0.896,2-2V6C22,4.896,21.104,4,20,4z M20,8.7l-8,5.334 L4,8.7V6.297l8,5.333l8-5.333V8.7z"/></svg>
+                            button(type="submit", aria-label="submit")
+                                include ../assets/icon/email.svg
                     img.media.lg-6.md-8.sm-4(src="/assets/img/placeholder.svg" alt="")
                 section.wrapper.lg-10.offset-1.md-8.sm-4
                     .lg-6.md-8.sm-4.text--center
@@ -54,4 +81,5 @@ html(lang="en")
                         p Everyone has a unique past and personality. Tell the world your hobbies and interests. Show off your education and work history.
         footer.page-footer
             hr
+            a(href="javascript:window.Metomic('ConsentManager:show')") Manage Cookies
             small.copyright Copyright 2019 by Greenhouse Tech
