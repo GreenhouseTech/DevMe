@@ -18,7 +18,7 @@ bug fixes
 ### Security
 vulnerabilities
 -->
-## [Unreleased]
+## v0.1.0 - 2019-12-4
 ### Added
 - Added Readme, License, Code of Conduct and (interestingly enough) Changelog
 - Added Twitter, OpenGraph and standard Meta tags for SEO
