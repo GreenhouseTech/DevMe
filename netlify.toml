@@ -13,7 +13,7 @@
 
 [[redirects]]
   from = "/progress"
-  to = "https://headwayapp.co/devme-changelog"
+  to = "https://github.com/GreenhouseTech/DevMe/blob/stable/CHANGELOG.md"
   
 [build.processing]
   skip_processing = false
