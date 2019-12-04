@@ -21,7 +21,9 @@ html(lang="en")
             link(rel="stylesheet", href="/css/style.min.css")
             script(defer, src="/js/bundle.min.js")
             link(rel="stylesheet", async, href="https://fonts.googleapis.com/css?family=Montserrat&display=swap")
-            script.
+            
+            //- Crisp Live Chat
+            script(type="text/x-metomic", data-micropolicy="chat").
                 window.$crisp=[];
                 window.CRISP_WEBSITE_ID="7f5b7db2-a8d0-4996-88ba-687b557af654";
                 (function(){
@@ -31,16 +33,25 @@ html(lang="en")
                     s.async=1;
                     d.getElementsByTagName("head")[0].appendChild(s);
                 })();
+
+            //- Google Analytics
             unless page_profile
-                //- Google Analytics
                 script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-119385435-5")
-                script.
+                link(rel="preconnect" href="https://www.googletagmanager.com")
+                link(rel="preconnect" href="https://www.google-analytics.com")
+                script(type="text/x-metomic", data-micropolicy="statistics").
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                     gtag('config', 'UA-119385435-5');
-                link(rel="preconnect" href="https://www.googletagmanager.com")
-                link(rel="preconnect" href="https://www.google-analytics.com")
+
+            //- Metomic Cookie Banner
+            script.
+                !(function(p,r,i,v,a,c,y){p['MetomicObject']=a;p[a]=p[a]||function(){
+                (p[a].q=p[a].q||[]).push(arguments)},p[a].l=1*new Date();c=r.createElement(i),
+                y=r.getElementsByTagName(i)[0];c.async=1;c.src=v+'?d='+r.location.host;y.parentNode.insertBefore(c,y)
+                })(window, document, 'script', 'https://consent-manager.metomic.io/embed.js', 'Metomic');
+                Metomic('load', { projectId: 'prj:ec60d992-8d78-4d43-83a4-0e413628941f' });
     body(class="page-wrapper " + body_class)
         header.page-header
             a(href="/").page-header__logo
