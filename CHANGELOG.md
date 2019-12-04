@@ -26,4 +26,4 @@ vulnerabilities
 - Follow [All Contributors](https://allcontributors.org/) specification
 - Site is mobile-responsive
 - Site is accessible
-- Added Cookie banner via <metomic.io>
+- Added Cookie banner via <https://metomic.io>
