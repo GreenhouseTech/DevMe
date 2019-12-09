@@ -19,17 +19,27 @@ html(lang="en")
             script(defer, src="/js/bundle.min.js")
             link(rel="stylesheet", async, href="https://fonts.googleapis.com/css?family=Montserrat&display=swap")
 
-            //- Crisp Live Chat
-            script(type="text/x-metomic", data-micropolicy="chat").
-                window.$crisp=[];
-                window.CRISP_WEBSITE_ID="7f5b7db2-a8d0-4996-88ba-687b557af654";
-                (function(){
-                    d=document;
-                    s=d.createElement("script");
-                    s.src="https://client.crisp.chat/l.js";
-                    s.async=1;
-                    d.getElementsByTagName("head")[0].appendChild(s);
-                })();
+            //- Chatra Live Chat
+            script(async).
+                window.ChatraSetup = {
+                    colors: {
+                        buttonText: '#F5F9FC',
+                        buttonBg: '#58B27D'
+                    }
+                };
+            <!-- Chatra {literal} -->
+            script(async, type="text/x-metomic", data-micropolicy="chat").
+                (function(d, w, c) {
+                    w.ChatraID = 'jQ24baZt2q7Lp7Mr5';
+                    var s = d.createElement('script');
+                    w[c] = w[c] || function() {
+                        (w[c].q = w[c].q || []).push(arguments);
+                    };
+                    s.async = true;
+                    s.src = 'https://call.chatra.io/chatra.js';
+                    if (d.head) d.head.appendChild(s);
+                })(document, window, 'Chatra');
+            <!-- /Chatra {/literal} -->
 
             //- Google Analytics
             script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-119385435-5")
@@ -67,9 +77,12 @@ html(lang="en")
                         h2.text--title Coming Soon
                         h1.text--large All your socials. One Page.
                         p.text--bigger A free, universal profile for developers. Show off your projects, education, or geekiness.
-                        form.form--single-input(action="https://tinyletter.com/DevMe", method="post", target="popupwindow", onsubmit="window.open('https://tinyletter.com/DevMe', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true")
-                            input(type="email", required, placeholder="Email me updates", aria-label="Email me updates", name="email", id="tlemail")
-                            button(type="submit", aria-label="submit")
+                        form.form--single-input(action="https://getdevme.us18.list-manage.com/subscribe/post?u=4fdf9c5af9a5d0fee06a55de0&id=8338f7c35b", method="post", name="mc-embedded-subscribe-form", target="_blank")
+                            input(type="email", name="EMAIL", required, placeholder="Email me updates", aria-label="Email me updates")
+                            //- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                            div(style="position: absolute; left: -5000px;", aria-hidden="true")
+                                input(type="text", name="b_4fdf9c5af9a5d0fee06a55de0_8338f7c35b", tabindex="-1", value="")
+                            button(type="submit", aria-label="Submit")
                                 include ../assets/icon/email.svg
                     img.media.lg-6.md-8.sm-4(src="/assets/img/placeholder.svg" alt="")
                 section.wrapper.lg-10.offset-1.md-8.sm-4

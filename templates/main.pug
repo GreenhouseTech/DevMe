@@ -22,17 +22,27 @@ html(lang="en")
             script(defer, src="/js/bundle.min.js")
             link(rel="stylesheet", async, href="https://fonts.googleapis.com/css?family=Montserrat&display=swap")
             
-            //- Crisp Live Chat
-            script(type="text/x-metomic", data-micropolicy="chat").
-                window.$crisp=[];
-                window.CRISP_WEBSITE_ID="7f5b7db2-a8d0-4996-88ba-687b557af654";
-                (function(){
-                    d=document;
-                    s=d.createElement("script");
-                    s.src="https://client.crisp.chat/l.js";
-                    s.async=1;
-                    d.getElementsByTagName("head")[0].appendChild(s);
-                })();
+                        //- Chatra Live Chat
+            script(async).
+                window.ChatraSetup = {
+                    colors: {
+                        buttonText: '#F5F9FC',
+                        buttonBg: '#58B27D'
+                    }
+                };
+            <!-- Chatra {literal} -->
+            script(async, type="text/x-metomic", data-micropolicy="chat").
+                (function(d, w, c) {
+                    w.ChatraID = 'jQ24baZt2q7Lp7Mr5';
+                    var s = d.createElement('script');
+                    w[c] = w[c] || function() {
+                        (w[c].q = w[c].q || []).push(arguments);
+                    };
+                    s.async = true;
+                    s.src = 'https://call.chatra.io/chatra.js';
+                    if (d.head) d.head.appendChild(s);
+                })(document, window, 'Chatra');
+            <!-- /Chatra {/literal} -->
 
             //- Google Analytics
             unless page_profile

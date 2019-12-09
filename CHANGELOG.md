@@ -18,6 +18,15 @@ bug fixes
 ### Security
 vulnerabilities
 -->
+
+## Unreleased
+### Added
+- redirect `/progress` to changelog on GitHub
+- Add Structured Data
+### Changed
+- switch from crisp to chatra for a11y concerns
+- Change newsletter from tinyletter to mailchimp
+
 ## v0.1.0 - 2019-12-4
 ### Added
 - Added Readme, License, Code of Conduct and (interestingly enough) Changelog

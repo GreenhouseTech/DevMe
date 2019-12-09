@@ -30,4 +30,16 @@ block seo
         meta(property="twitter:title", content=site_title)
     meta(property="twitter:description", content=site_desc)
     meta(property="twitter:image", content="https://devme.netlify.com/assets/post-small.png")
+
+    script(type="application/ld+json").
+        {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "DevMe",
+        "url": "https://www.getdevme.com/",
+        "sameAs": [
+            "https://www.twitter.com/getdevme"
+        ],
+        "logo": "https://www.getdevme.com/assets/logo.png"
+        }
     //- SEO End
