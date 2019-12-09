@@ -1,5 +1,4 @@
-async function log() {
-    console.log(await fetch('../assets/changelog.json'))
-}
-
-log();
+(async function() {
+    let res = await fetch('../assets/changelog.json');
+    console.log(await res.json())
+})();

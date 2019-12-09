@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A Universal Profile for devs",
   "scripts": {
-    "start": "gulp pack && gulp watch",
-    "watch": "gulp watch",
-    "pack": "gulp pack"
+    "start": "webpack --mode development",
+    "watch": "webpack-dev-server",
+    "compile": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -23,20 +23,24 @@
     "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.4",
     "changelog-parser": "^2.8.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
     "jstransformer-markdown-it": "^2.1.0",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.7.6"
+    "@babel/runtime": "^7.7.6",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.0",
+    "css-loader": "^3.2.1",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "mini-css-extract-plugin": "^0.8.0",
+    "pug-html-loader": "^1.1.5",
+    "sass-loader": "^8.0.0"
   }
 }
