@@ -1,7 +1,7 @@
 //- seo.pug
 
 block seo
-    - var url = "https://devme.netlify.com"
+    - var url = "https://getdevme.com"
     //- SEO Start
     meta(name="author", content="Binyamin Green")
     meta(name="description", content=site_desc)
@@ -17,7 +17,7 @@ block seo
     else
         meta(property="og:title", content=site_title)
     meta(property="og:description", content=site_desc)
-    meta(property="og:image", content="https://devme.netlify.com/assets/post-square.png")
+    meta(property="og:image", content="https://getdevme.com/assets/post-square.png")
 
     meta(property="twitter:card", content="summary_large_image")
     if url
@@ -29,17 +29,17 @@ block seo
     else
         meta(property="twitter:title", content=site_title)
     meta(property="twitter:description", content=site_desc)
-    meta(property="twitter:image", content="https://devme.netlify.com/assets/post-small.png")
+    meta(property="twitter:image", content="https://getdevme.com/assets/post-small.png")
 
     script(type="application/ld+json").
         {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "name": "DevMe",
-        "url": "https://www.getdevme.com/",
-        "sameAs": [
-            "https://www.twitter.com/getdevme"
-        ],
-        "logo": "https://www.getdevme.com/assets/logo.png"
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "DevMe",
+            "url": "https://www.getdevme.com/",
+            "sameAs": [
+                "https://www.twitter.com/getdevme"
+            ],
+            "logo": "https://www.getdevme.com/assets/logo.png"
         }
     //- SEO End

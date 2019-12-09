@@ -14,6 +14,9 @@ const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 
+const changelogParser = require('changelog-parser')
+const fs = require('fs')
+
 function css(cb) {
     gulp
       .src("scss/*.scss")
@@ -39,17 +42,26 @@ function js(cb) {
   gulp
     .src("js/**/*.js")
     .pipe(sourcemaps.init())
-    .pipe(concat('bundle.js'))
-    .pipe(
-      babel({
-        presets: ["@babel/env"]
+    .pipe(babel({
+        presets: ["@babel/preset-env"],
+        plugins: ['@babel/transform-runtime']
       })
     )
     .pipe(uglify())
+    .pipe(concat('bundle.js'))
     .pipe(rename("bundle.min.js" ))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest("dist/js"));
   cb();
+}
+
+async function log(cb) {
+  try {
+    const log = await changelogParser('CHANGELOG.md')
+    fs.writeFileSync('./dist/assets/changelog.json', JSON.stringify(log, null, 4));
+  } catch(err) {
+    throw new Error(err)
+  }
 }
 
 function assets(cb) {
@@ -63,12 +75,14 @@ function watch(cb) {
     gulp.watch('(templates|views)/**/*.pug', html)
     gulp.watch("scss/**/*.scss", css)
     gulp.watch("js/**/*.js", js)
+    gulp.watch("CHANGELOG.md", log)
     gulp.watch("assets", assets)
     cb();
 }
 
 exports.html = html;
 exports.css = css;
+exports.log = log;
 exports.assets = assets;
-exports.pack = gulp.parallel(html, css, js, assets);
+exports.pack = gulp.parallel(html, css, js, assets, log);
 exports.watch = watch;

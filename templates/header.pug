@@ -1,0 +1,14 @@
+//- header.pug
+
+block header
+    header.page-header
+        a(href="/").page-header__logo
+            img(src="/assets/wordmark.svg" alt="Home").page-header__logo-img
+        a(href="#", role="button", hidden, aria-hidden=true, aria-label="Toggle Menu", aria-controls="nav")#hamburger.hamburger.js-hamburger
+            span.hamburger__bar
+            span.hamburger__bar
+            span.hamburger__bar
+        nav#nav.nav-wrapper.js-nav-wrapper
+            a(href="/about.html").nav__link About
+            a(href="/open.html").nav__link Open
+            a(href="/legal.html").nav__link Legal

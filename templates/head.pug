@@ -1,0 +1,55 @@
+//- head.pug
+
+block head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    if page_title
+        title #{page_title} | #{site_title}
+    else
+        title= site_title
+    link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="/css/style.min.css")
+    script(defer, src="/js/bundle.min.js")
+    link(rel="stylesheet", async, href="https://fonts.googleapis.com/css?family=Montserrat&display=swap")
+    
+    //- Chatra Live Chat
+    script(async).
+        window.ChatraSetup = {
+            colors: {
+                buttonText: '#F5F9FC',
+                buttonBg: '#58B27D'
+            }
+        };
+    <!-- Chatra {literal} -->
+    script(async, type="text/x-metomic", data-micropolicy="chat").
+        (function(d, w, c) {
+            w.ChatraID = 'jQ24baZt2q7Lp7Mr5';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+    <!-- /Chatra {/literal} -->
+
+    //- Google Analytics
+    unless page_profile
+        script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-119385435-5")
+        link(rel="preconnect" href="https://www.googletagmanager.com")
+        link(rel="preconnect" href="https://www.google-analytics.com")
+        script(type="text/x-metomic", data-micropolicy="statistics").
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-119385435-5');
+
+    //- Metomic Cookie Banner
+    script.
+        !(function(p,r,i,v,a,c,y){p['MetomicObject']=a;p[a]=p[a]||function(){
+        (p[a].q=p[a].q||[]).push(arguments)},p[a].l=1*new Date();c=r.createElement(i),
+        y=r.getElementsByTagName(i)[0];c.async=1;c.src=v+'?d='+r.location.host;y.parentNode.insertBefore(c,y)
+        })(window, document, 'script', 'https://consent-manager.metomic.io/embed.js', 'Metomic');
+        Metomic('load', { projectId: 'prj:ec60d992-8d78-4d43-83a4-0e413628941f' });
