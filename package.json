@@ -4,6 +4,7 @@
   "description": "A Universal Profile for devs",
   "scripts": {
     "start": "webpack --mode development",
+    "test:lhci": "lhci autorun --assert.preset=lighthouse:no-pwa",
     "watch": "webpack-dev-server",
     "compile": "webpack --mode production"
   },
