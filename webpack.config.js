@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const postcssAutoPrefixer = require("autoprefixer");
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 const isDev = process.env.NODE_ENV !== "prod";
 
@@ -44,6 +45,10 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin([{ from: "./assets", to: "./assets" }]),
     new MiniCssExtractPlugin({ chunkFilename: "css/style.[contentHash].css" }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true
+    }),
     ...pages
   ],
   module: {
