@@ -9,7 +9,7 @@ before_install:
 
 script:
   - npm run compile
-  - lhci autorun --assert.preset=lighthouse:recommended --upload.target=temporary-public-storage
+  - lhci autorun --assert.preset=lighthouse:recommended ----rc-overrides.upload.target=temporary-public-storage
 
 # deploy:
 #   provider: netlify
