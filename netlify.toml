@@ -15,6 +15,11 @@
   from = "/progress"
   to = "https://github.com/GreenhouseTech/DevMe/blob/stable/CHANGELOG.md"
 
+[[redirects]]
+  from = "/*"
+  to = /
+  status = 404
+
 [build.processing]
   skip_processing = false
 [build.processing.css]
