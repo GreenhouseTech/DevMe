@@ -1,8 +1,15 @@
 language: node_js
+node_js: "10"
 
-node_js: "8"
+addons:
+  chrome: stable
 
-script: npm run compile
+before_install:
+  - npm install -g @lhci/cli@0.3.x
+
+script:
+  - npm run compile
+  - lhci autorun --assert.preset=lighthouse:recommended --upload.target=temporary-public-storage
 
 # deploy:
 #   provider: netlify

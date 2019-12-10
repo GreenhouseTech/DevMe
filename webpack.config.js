@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const parseChangelog = require("changelog-parser");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -13,12 +14,12 @@ let page,
   pageDirs = ["pages", "pages/legal"];
 
 pageDirs.forEach(d => {
-  fs.readdirSync(d).forEach(file => {
+  fs.readdirSync(d).forEach(async file => {
     if (file.slice(-4) === ".pug") {
-      console.log(file);
       page = new HtmlWebpackPlugin({
         filename: path.join(d.replace(/pages(\/)?/g, ''), file.replace(".pug", ".html")),
-        template: path.join(d, file)
+        template: path.join(d, file),
+        templateParameters: (file.slice(0,-4) === 'progress' ? ({log: await parseChangelog('./CHANGELOG.md')}) : null)
       });
       pages.push(page);
     }
