@@ -1,7 +1,6 @@
 //- seo.pug
 
 block seo
-    - var url = "https://getdevme.com"
     //- SEO Start
     meta(name="author", content="Binyamin Green")
     meta(name="description", content=site_desc)
@@ -36,9 +35,13 @@ block seo
             "@context": "http://schema.org",
             "@type": "Organization",
             "name": "DevMe",
+            "contactPoint": {
+                "email": "hi@getdevme.com",
+            },
             "url": "https://www.getdevme.com/",
             "sameAs": [
-                "https://www.twitter.com/getdevme"
+                "https://www.twitter.com/getdevme",
+                "https://github.com/GreenhouseTech/DevMe"
             ],
             "logo": "https://www.getdevme.com/assets/logo.png"
         }

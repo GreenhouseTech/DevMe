@@ -1,10 +1,10 @@
 const path = require("path");
 const fs = require("fs");
-const parseChangelog = require("changelog-parser");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const postcssAutoPrefixer = require("autoprefixer");
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 const isDev = process.env.NODE_ENV !== "prod";
 
@@ -19,7 +19,6 @@ pageDirs.forEach(d => {
       page = new HtmlWebpackPlugin({
         filename: path.join(d.replace(/pages(\/)?/g, ''), file.replace(".pug", ".html")),
         template: path.join(d, file),
-        templateParameters: (file.slice(0,-4) === 'progress' ? ({log: await parseChangelog('./CHANGELOG.md')}) : null)
       });
       pages.push(page);
     }
@@ -28,10 +27,15 @@ pageDirs.forEach(d => {
 
 module.exports = {
   mode: "development",
-  entry: "./main.js",
+  optimization: {
+    runtimeChunk: 'single',
+    moduleIds: 'hashed',
+  },
+  entry: [ "./js/main.js", "./scss/style.scss"],
   output: {
-    filename: "js/bundle.min.js",
-    path: path.resolve(__dirname, "./dist")
+    filename: 'js/[name].[contentHash].js',
+    chunkFilename: 'js/[name].[contentHash].js',
+    path: path.resolve(__dirname, "./dist"),
   },
   devtool: isDev && "source-map",
   devServer: {
@@ -40,7 +44,11 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([{ from: "./assets", to: "./assets" }]),
-    new MiniCssExtractPlugin({ filename: "css/style.min.css" }),
+    new MiniCssExtractPlugin({ chunkFilename: "css/style.[contentHash].css" }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true
+    }),
     ...pages
   ],
   module: {
@@ -56,7 +64,7 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        loaders: ["html-loader", "pug-html-loader"]
+        use: "pug-loader"
       },
       {
         test: /\.scss$/i,
