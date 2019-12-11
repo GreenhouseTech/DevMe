@@ -1,7 +1,7 @@
 # netlify.toml
 
 [build]
-  command = "npm run pack"
+  command = "npm run compile"
   publish = "dist"
 
 [dev]
@@ -13,8 +13,19 @@
 
 [[redirects]]
   from = "/progress"
-  to = "https://headwayapp.co/devme-changelog"
-  
+  to = "https://github.com/GreenhouseTech/DevMe/blob/stable/CHANGELOG.md"
+
+[[redirects]]
+  from = "/newsletter"
+  to = "https://eepurl.com/gMir_r"
+
+[[headers]]
+  for = "/**/*"
+  [headers.values]
+    cache-control = '''
+      max-age=31536000,
+      no-cache'''
+
 [build.processing]
   skip_processing = false
 [build.processing.css]

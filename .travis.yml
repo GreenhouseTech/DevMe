@@ -1,20 +1,25 @@
-branches:
-  only:
-    - stable
-    - master
-    - "/^feature\/.+/"
-
 language: node_js
+node_js: "10"
 
-node_js: "8"
-
-script: npm run pack
-
-# deploy:
-#   provider: netlify
-#   site: 63089d2f-46a6-40e5-a019-d957c172b2f2
-#   auth: $NETLIFY_AUTH
-#   dir: dist
-#   edge: true # opt in to dpl v2
-#   on:
-#     branch: stable
+jobs:
+  include:
+    - stage: Compile
+      script: "npm run compile"
+    - stage: Test
+      name: "A11y Test"
+      if: branch = stable
+      addons:
+        chrome: stable
+      install: "npm install -g @lhci/cli@0.3.x"
+      before_script: "npm run compile"
+      script: "lhci autorun --assert.preset=lighthouse:no-pwa --upload.target=temporary-public-storage"
+    - stage: Deploy
+      if: false
+      install: skip
+      script: skip
+      deploy:
+        provider: netlify
+        site: 63089d2f-46a6-40e5-a019-d957c172b2f2
+        auth: $NETLIFY_AUTH
+        dir: dist
+        edge: true # opt in to dpl v2

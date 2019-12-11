@@ -1,0 +1,36 @@
+<mjml>
+  <mj-head>
+    <mj-preview>Hi, Binyamin here.</mj-preview>
+    <mj-attributes>
+      <mj-text line-height="19px" />
+      <mj-all font-family="Open Sans, Arial, Segoe UI, sans-serif" />
+    </mj-attributes>
+    <mj-style inline="inline">
+      a {
+        color: #58B27D;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="white">
+    <mj-section full-width="full-width">
+      <mj-column>
+        <mj-image src="*|BRAND:LOGO|*" width="150px" align="center" alt="DevMe Logo" />
+        <mj-divider border-color="#58B27D" border-width="2px"></mj-divider>
+        <mj-text font-size="14px">
+          <p>Hi*|IF:FNAME|* *|FNAME|**|END:IF|*,</p>
+          <p>Thanks for signing up for the DevMe Newsletter. It means the world to me that you are interested in my project. I'll try not to spam you with promotions because I don't like those either. In the future, you should get emails relating to project milestones and/or updates. Thanks for being awesome!</p>
+          <p>Binyamin Green<br><em>Founder, DevMe</em></p>
+        </mj-text>
+        <mj-divider border-width="2px" />
+        <mj-text align="center" font-size="12px">
+          <p>Copyright © *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved</p>
+          <p>*|LIST:DESCRIPTION|*</p>
+          *|HTML:LIST_ADDRESS_HTML|*
+          <p><a href="*|UNSUB|*">Unsubscribe</a> | <a href="https://twitter.com/GetDevMe">Twitter</a> | <a href="https://github.com/GreenhouseTech">GitHub</a></p>
+          *|IF:REWARDS|**|HTML:REWARDS|**|END:IF|*
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -18,6 +18,19 @@ bug fixes
 ### Security
 vulnerabilities
 -->
+
+## v0.2.0 - 2019-12-10
+### Added
+- redirect `/progress` to changelog on GitHub
+- redirect `/newsletter` to newsletter
+- Add Structured Data
+### Changed
+- switch from crisp to chatra for a11y concerns
+- Change newsletter from tinyletter to mailchimp
+- Use Webpack instead of gulp (for bundling)
+### Fixed
+- Site passes Lighthouse Audits
+
 ## v0.1.0 - 2019-12-4
 ### Added
 - Added Readme, License, Code of Conduct and (interestingly enough) Changelog
@@ -26,4 +39,4 @@ vulnerabilities
 - Follow [All Contributors](https://allcontributors.org/) specification
 - Site is mobile-responsive
 - Site is accessible
-- Added Cookie banner via <metomic.io>
+- Added Cookie banner via <https://metomic.io>
