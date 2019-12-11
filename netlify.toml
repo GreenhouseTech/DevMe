@@ -15,6 +15,10 @@
   from = "/progress"
   to = "https://github.com/GreenhouseTech/DevMe/blob/stable/CHANGELOG.md"
 
+[[redirects]]
+  from = "/newsletter"
+  to = "https://eepurl.com/gMir_r"
+
 [build.processing]
   skip_processing = false
 [build.processing.css]

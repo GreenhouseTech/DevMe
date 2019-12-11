@@ -22,6 +22,7 @@ vulnerabilities
 ## Unreleased
 ### Added
 - redirect `/progress` to changelog on GitHub
+- redirect `/newsletter` to newsletter
 - Add Structured Data
 ### Changed
 - switch from crisp to chatra for a11y concerns

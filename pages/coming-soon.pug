@@ -24,11 +24,13 @@ block content
                     h2.text--title Coming Soon
                     h1.text--large All your socials. One Page.
                     p.text--bigger A free, universal profile for developers. Show off your projects, education, or geekiness.
-                    form.form--single-input(action="https://getdevme.us18.list-manage.com/subscribe/post?u=4fdf9c5af9a5d0fee06a55de0&id=8338f7c35b", method="post", name="mc-embedded-subscribe-form", target="_blank")
+                    form.form--single-input(action="https://getdevme.us18.list-manage.com/subscribe/post", method="post", target="_blank")
                         input(type="email", name="EMAIL", required, placeholder="Email me updates", aria-label="Email me updates")
-                        //- real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                        div(style="position: absolute; left: -5000px;", aria-hidden="true")
-                            input(type="text", name="b_4fdf9c5af9a5d0fee06a55de0_8338f7c35b", tabindex="-1", value="")
+                        input(type="hidden" name="u" value="4fdf9c5af9a5d0fee06a55de0")
+                        input(type="hidden" name="id" value="8338f7c35b")
+                        //- Start GDPR
+                        input(type="hidden" name="gdpr[59603]" value="Y")
+                        //- End GDPR
                         button(type="submit", aria-label="Submit")
                             include ../assets/icon/email.svg
                 img.media.lg-6.md-8.sm-4(src="/assets/img/placeholder.svg" alt="")
