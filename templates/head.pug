@@ -9,11 +9,10 @@ block head
     else
         title= site_title
     link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
-    //- link(rel="stylesheet", href="/css/style.min.css")
-    //- script(defer, src="/js/bundle.min.js")
-    link(rel="stylesheet", async, href="https://fonts.googleapis.com/css?family=Montserrat&display=swap")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat&display=swap")
     
     //- Chatra Live Chat
+    link(rel="preconnect", href="https://call.chatra.io")
     script(async).
         window.ChatraSetup = {
             colors: {
@@ -47,6 +46,8 @@ block head
             gtag('config', 'UA-119385435-5');
 
     //- Metomic Cookie Banner
+    link(rel="preconnect", href="https://consent-manager.metomic.io")
+    link(rel="preconnect", href="https://apipub.metomic.io")
     script.
         !(function(p,r,i,v,a,c,y){p['MetomicObject']=a;p[a]=p[a]||function(){
         (p[a].q=p[a].q||[]).push(arguments)},p[a].l=1*new Date();c=r.createElement(i),
