@@ -19,7 +19,7 @@ bug fixes
 vulnerabilities
 -->
 
-## Unreleased
+## v0.2.0 - 2019-12-10
 ### Added
 - redirect `/progress` to changelog on GitHub
 - redirect `/newsletter` to newsletter
