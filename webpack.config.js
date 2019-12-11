@@ -31,7 +31,7 @@ module.exports = {
     runtimeChunk: 'single',
     moduleIds: 'hashed',
   },
-  entry: [ "./js/menu.js", "./scss/style.scss"],
+  entry: [ "./js/main.js", "./scss/style.scss"],
   output: {
     filename: 'js/[name].[contentHash].js',
     chunkFilename: 'js/[name].[contentHash].js',
