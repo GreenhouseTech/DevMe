@@ -27,6 +27,8 @@ vulnerabilities
 - switch from crisp to chatra for a11y concerns
 - Change newsletter from tinyletter to mailchimp
 - Use Webpack instead of gulp (for bundling)
+### Fixed
+- Site passes Lighthouse Audits
 
 ## v0.1.0 - 2019-12-4
 ### Added

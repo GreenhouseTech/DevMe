@@ -48,7 +48,7 @@ h4, h5, h6 {
 }
 
 // Hyperlinks
-a {
+a:not(.btn) {
     color: $black;
     & .icon {
         width: 24px;
