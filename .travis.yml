@@ -11,6 +11,7 @@ jobs:
       addons:
         chrome: stable
       install: "npm install -g @lhci/cli@0.3.x"
+      before_script: "npm run compile"
       script: "lhci autorun --assert.preset=lighthouse:no-pwa --upload.target=temporary-public-storage"
     - stage: Deploy
       if: false
