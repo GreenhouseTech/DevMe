@@ -18,7 +18,10 @@ bug fixes
 ### Security
 vulnerabilities
 -->
-
+## v0.2.1 - 2019-12-12
+### Fixed
+- changed header image so it spans the viewport regardless of screen size
+- hamburger menu now works when you switch to mobile without reload
 ## v0.2.0 - 2019-12-10
 ### Added
 - redirect `/progress` to changelog on GitHub
