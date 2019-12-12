@@ -8,24 +8,13 @@ body {
     flex-direction: column;
 }
 
-.page-wrapper {
+.page-header {
     background-image: url(/assets/img/header.svg);
-    background-size: auto;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
 }
 
-// .page--home {
-//     background-image: url(/assets/img/bg_1.svg);
-//     background-size: 100vw;
-// }
-
-// @media only screen and (max-width: 479px) {
-//     .page--home {
-//         background-image: url(/assets/img/header.svg);
-//         background-size: auto;
-//     }
-// }
 .media {
     width: 100%;
 }
