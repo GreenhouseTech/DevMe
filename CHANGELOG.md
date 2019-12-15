@@ -18,6 +18,9 @@ bug fixes
 ### Security
 vulnerabilities
 -->
+## Unreleased
+### Changed
+- switched from metomic to yeps for cookie banner
 ## v0.2.1 - 2019-12-12
 ### Fixed
 - changed header image so it spans the viewport regardless of screen size

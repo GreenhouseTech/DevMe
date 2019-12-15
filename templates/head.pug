@@ -21,7 +21,7 @@ block head
             }
         };
     <!-- Chatra {literal} -->
-    script(async, type="text/x-metomic", data-micropolicy="chat").
+    script.
         (function(d, w, c) {
             w.ChatraID = 'jQ24baZt2q7Lp7Mr5';
             var s = d.createElement('script');
@@ -39,18 +39,23 @@ block head
         script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-119385435-5")
         link(rel="preconnect" href="https://www.googletagmanager.com")
         link(rel="preconnect" href="https://www.google-analytics.com")
-        script(type="text/x-metomic", data-micropolicy="statistics").
+        script.
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'UA-119385435-5');
-
-    //- Metomic Cookie Banner
-    link(rel="preconnect", href="https://consent-manager.metomic.io")
-    link(rel="preconnect", href="https://apipub.metomic.io")
+            
+    link(rel="preconnect", href="https://widget.yeps.io")
+    <!-- Yeps {literal} -->
     script.
-        !(function(p,r,i,v,a,c,y){p['MetomicObject']=a;p[a]=p[a]||function(){
-        (p[a].q=p[a].q||[]).push(arguments)},p[a].l=1*new Date();c=r.createElement(i),
-        y=r.getElementsByTagName(i)[0];c.async=1;c.src=v+'?d='+r.location.host;y.parentNode.insertBefore(c,y)
-        })(window, document, 'script', 'https://consent-manager.metomic.io/embed.js', 'Metomic');
-        Metomic('load', { projectId: 'prj:ec60d992-8d78-4d43-83a4-0e413628941f' });
+        (function (y, e, p) {
+            e.YepsID = 'Yp3vFpaQD2CuT3q2C';
+            var s = y.createElement('script');
+            e[p] = e[p] || function() {
+                (e[p].q = e[p].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://widget.yeps.io/yeps.js';
+            if (y.head) y.head.appendChild(s);
+        })(document, window, 'Yeps');
+    <!-- /Yeps {/literal} -->
