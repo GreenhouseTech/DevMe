@@ -17,7 +17,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-> Welcome to the DevMe codebase. Thanks for stopping by! We can't build awesomeness alone, ya' know. DevMe will be an online profile for developers to show off their skills, interests, projects, and hobbies. Check out [our newsletter](https://tinyletter.com/devme) to get updated on development.
+> Welcome to the DevMe codebase. Thanks for stopping by! We can't build awesomeness alone, ya' know. DevMe will be an online profile for developers to show off their skills, interests, projects, and hobbies. Check out [our newsletter](https://getdevme.com/newsletter) to get updates on development.
 
 ## About
 DevMe is an upcoming platform where developers can show off their skills, interests, projects, and hobbies. It will integrate with your services like GitHub, DevTo and LinkedIn. It will even have space for donation and contact methods. Oh, and it's free.
