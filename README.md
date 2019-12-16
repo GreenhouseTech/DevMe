@@ -17,7 +17,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-> Welcome to the DevMe codebase. Thanks for stopping by! We can't build awesomeness alone, ya' know. DevMe will be an online profile for developers to show off their skills, interests, projects, and hobbies. Check out [our newsletter](https://tinyletter.com/devme) to get updated on development.
+> Welcome to the DevMe codebase. Thanks for stopping by! We can't build awesomeness alone, ya' know. DevMe will be an online profile for developers to show off their skills, interests, projects, and hobbies. Check out [our newsletter](https://getdevme.com/newsletter) to get updates on development.
 
 ## About
 DevMe is an upcoming platform where developers can show off their skills, interests, projects, and hobbies. It will integrate with your services like GitHub, DevTo and LinkedIn. It will even have space for donation and contact methods. Oh, and it's free.
@@ -28,8 +28,8 @@ DevMe is an upcoming platform where developers can show off their skills, intere
 ## Contributing
 We welcome all sorts of contributions! There are a couple ways you can help.
 - :arrow_up_small: Put in a feature request via GitHub issue.
-- :e-mail: Subscribe to [the newsletter](https://tinyletter.com/devme) (no jokes, this is actually very helpful)
-- :star: Star the repo. This helps us gain exposure.
+- :e-mail: Subscribe to [the newsletter](https://getdevme.com/newsletter) (no jokes, this is actually very helpful)
+- :star: Star the repo. This helps us gain exposure. PS: It's free
 - :speaking_head: Tell a friend. This also helps us gain exposure.
 - :computer: Help with code ([learn how](https://github.com/greenhousetech/devme/blob/master/contributing.md)).
 - :money_with_wings: ~~Donate on Open Collective~~ (Waiting for those 100 stars. C'mon, it's free :heart_eyes:)

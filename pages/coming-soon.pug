@@ -3,7 +3,7 @@
 extends ../templates/base.pug
 
 block append variables
-    - var page_title = "Coming Soon"
+    - var url = "https://getdevme.com"
 
 block content
     header.page-header
@@ -21,27 +21,25 @@ block content
         .wrapper
             section.wrapper.lg-12.md-8.sm-4
                 .lg-6.md-8.sm-4
-                    h2.text--title Coming Soon
-                    h1.text--large All your socials. One Page.
-                    p.text--bigger A free, universal profile for developers. Show off your projects, education, or geekiness.
+                    h1.text--large Your Skills, Your Page.
+                    p.text--bigger List your skills, job experience, projects, and hobbies with a single link. It's coming, just you wait. Stay updated for details.
                     form.form--single-input(action="https://getdevme.us18.list-manage.com/subscribe/post", method="post", target="_blank")
-                        input(type="email", name="EMAIL", required, placeholder="Email me updates", aria-label="Email me updates")
-                        input(type="hidden" name="u" value="4fdf9c5af9a5d0fee06a55de0")
-                        input(type="hidden" name="id" value="8338f7c35b")
+                        input(type="email" name="EMAIL" required placeholder="Enter your email" aria-label="Email" aria-description="Enter your email to receive project updates")
+                        input(type="hidden" name="u" value="4fdf9c5af9a5d0fee06a55de0" aria-hidden=true)
+                        input(type="hidden" name="id" value="8338f7c35b" aria-hidden=true)
                         //- Start GDPR
-                        input(type="hidden" name="gdpr[59603]" value="Y")
+                        input(type="hidden" name="gdpr[59603]" value="Y" aria-hidden=true)
                         //- End GDPR
-                        button(type="submit", aria-label="Submit")
+                        button(type="submit" aria-label="Submit")
                             include ../assets/icon/email.svg
                 img.media.lg-6.md-8.sm-4(src="/assets/img/placeholder.svg" alt="")
             section.wrapper.lg-10.offset-1.md-8.sm-4
                 .lg-6.md-8.sm-4.text--center
-                    h2 Your Project
-                    p What are your current hacks? Tell everyone what you're working on right now. Got a startup? There's no better place to promote it.</p>
+                    h2 Your Projects
+                    p What are your current hacks? What's your side-project right now? Tell everyone what you're working on <abbr title="at the moment">atm</abbr>. If you have a startup, there's no better place to promote than here.
                 .lg-6.md-8.sm-4.text--center
                     h2 Your Story
-                    p Everyone has a unique past and personality. Tell the world your hobbies and interests. Show off your education and work history.
+                    p Everyone has a unique past and personality. Reveal the world your hobbies and interests. Show off your education and work history.
     footer.page-footer
         hr
         small.copyright Copyright 2019 by Greenhouse Tech
-        a.cookies-notice(href="javascript:window.Metomic('ConsentManager:show')", role="button") Manage Cookies
