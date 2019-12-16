@@ -28,8 +28,8 @@ DevMe is an upcoming platform where developers can show off their skills, intere
 ## Contributing
 We welcome all sorts of contributions! There are a couple ways you can help.
 - :arrow_up_small: Put in a feature request via GitHub issue.
-- :e-mail: Subscribe to [the newsletter](https://tinyletter.com/devme) (no jokes, this is actually very helpful)
-- :star: Star the repo. This helps us gain exposure.
+- :e-mail: Subscribe to [the newsletter](https://getdevme.com/newsletter) (no jokes, this is actually very helpful)
+- :star: Star the repo. This helps us gain exposure. PS: It's free
 - :speaking_head: Tell a friend. This also helps us gain exposure.
 - :computer: Help with code ([learn how](https://github.com/greenhousetech/devme/blob/master/contributing.md)).
 - :money_with_wings: ~~Donate on Open Collective~~ (Waiting for those 100 stars. C'mon, it's free :heart_eyes:)
