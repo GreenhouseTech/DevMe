@@ -2,6 +2,9 @@
 
 extends ../templates/center.pug
 
+block append head
+    meta(name="robots" content="noindex")
+
 block append variables
     - var page_title = "Legal Stuff"
 

@@ -5,6 +5,9 @@ extends ../templates/main.pug
 block append variables
     - var body_class = "page--home"
 
+block append head
+    meta(name="robots" content="noindex")
+    
 block content
     main.main--default
         .wrapper

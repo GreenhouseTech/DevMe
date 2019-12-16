@@ -2,8 +2,10 @@
 
 block seo
     //- SEO Start
-    meta(name="author", content="Binyamin Green")
+    meta(name="author", content="Binyamin Aron Green")
     meta(name="description", content=site_desc)
+    meta(name="keywords", content="developer, programmer, coder, dev, software developer, software engineer, nerd, hacker, development, coding, computer engineer, JavaScript, Python, git, node, react, vue, SQL, PHP, git, Web Development, profile, hobbies, skills, side-project, profile page, personal page, projects, hacks")
+    
     if url
         link(rel="canonical", href=url)
         
@@ -12,7 +14,7 @@ block seo
         meta(property="og:url", content=url)
     meta(property="og:site_name", content="DevMe")
     if page_title
-        meta(property="og:title", content= page_title + ' | ' + site_title)
+        meta(property="og:title", content= page_title + ' - ' + site_title)
     else
         meta(property="og:title", content=site_title)
     meta(property="og:description", content=site_desc)
@@ -24,7 +26,7 @@ block seo
     meta(property="twitter:site", content="@GetDevMe")
     meta(property="twitter:creator", content="@binyamingreen")
     if page_title
-        meta(property="twitter:title", content= page_title + ' | ' + site_title)
+        meta(property="twitter:title", content= page_title + ' - ' + site_title)
     else
         meta(property="twitter:title", content=site_title)
     meta(property="twitter:description", content=site_desc)

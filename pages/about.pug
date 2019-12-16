@@ -5,6 +5,9 @@ extends ../templates/center.pug
 block append variables
     - var page_title = "About Us"
 
+block append head
+    meta(name="robots" content="noindex")
+
 block content
     h1.text--title About Us
     p <b>DevMe</b> is an online profile for developers to show off their skills, interests, projects, and hobbies. It integrates with your favorite services like GitHub&trade;, DevTo&trade; and LinkedIn&trade;. You can even customize it for donations or contact methods.

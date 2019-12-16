@@ -5,6 +5,9 @@ extends ../templates/center.pug
 block append variables
     - var page_title = "Open Source"
 
+block append head
+    meta(name="robots" content="noindex")
+
 block content
     h1 DevMe is Open-Source and Free
     p <b>It's open-source.</b> That means any developer can contribute to our project, or learn from it. Let's work together to build a brighter future.
