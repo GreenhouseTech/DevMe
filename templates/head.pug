@@ -10,7 +10,7 @@ block head
         title= site_title
     link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat&display=swap")
-    
+    script(async, src="./res/micromodal.min.js")
     //- Chatra Live Chat
     link(rel="preconnect", href="https://call.chatra.io")
     script(async).
@@ -45,6 +45,7 @@ block head
             gtag('js', new Date());
             gtag('config', 'UA-119385435-5');
             
+    //- Cookie Banner (yeps)
     link(rel="preconnect", href="https://widget.yeps.io")
     <!-- Yeps {literal} -->
     script.

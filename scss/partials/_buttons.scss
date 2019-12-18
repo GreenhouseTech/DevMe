@@ -1,20 +1,49 @@
-.btn {
-    border: none;
+[class^=btn] {
     background-color: $accent--dark;
+    border: 1px solid $accent--dark;
     color: $white;
-    padding: 8px 24px;
+    padding: 6px 16px;
     border-radius: 0;
     text-decoration: none;
     cursor: pointer;
     
-    font-size: 19px;
-    font-weight: bold;
-    letter-spacing: 0.02em;
+    font-weight: normal;
     font-family: $font-stack;
 
     &:hover,
     &:focus {
         outline: none;
         background-color: $accent;
+    }
+}
+
+.btn--icon {
+    line-height: 0;
+    fill: $white;
+    padding: 8px;
+}
+
+.btn--mixed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg, img {
+        margin-left: 8px;
+        width: 16px;
+    }
+}
+
+.btn--secondary {
+    border: 1px solid $black--medium;
+    color: $black--medium;
+    fill: $black--medium;
+    background-color: transparent;
+
+    &:hover {
+        background-color: inherit;
+        border-color: $accent--extra-dark;
+        color: $accent--extra-dark;
+        fill: $accent--extra-dark;
     }
 }

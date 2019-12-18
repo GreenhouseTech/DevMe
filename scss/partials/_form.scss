@@ -1,34 +1,136 @@
+.form--single-input {    
+    position: relative;
+    display: inline-flex;
+    border: 1px solid $accent;
+    
+    input, button {
+        border: none;
+        background: transparent;
+        font-size: 14px;
+        font-family: $font-stack;
+        border-radius: 0;
+    }
+    
+    input {
+        padding: 4px 0 4px 8px;
+        border-right: 1px solid $accent;
+        height: 36px - 8px;
+        width: 256px;
+    }
+    button {
+        background-color: $accent;
+        width: 36px;
+        cursor: pointer;
+
+        svg {fill: $white;}
+
+        &:hover {
+            background-color: transparent;
+            svg {fill: $accent}
+        }
+    }
+}
+
 .form {
-    &--single-input {
-        position: relative;
-        display: inline-flex;
-        border: 1px solid $accent;
-        
-        input, button {
-            border: none;
-            background: transparent;
-            font-size: 14px;
-            font-family: $font-stack;
-            border-radius: 0;
-        }
-        
-        input {
-            padding: 4px 0 4px 8px;
-            border-right: 1px solid $accent;
-            height: 36px - 8px;
-            width: 256px;
-        }
-        button {
-            background-color: $accent;
-            width: 36px;
-            cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-            svg {fill: $white;}
+}
 
-            &:hover {
-                background-color: transparent;
-                svg {fill: $accent}
+.form-element {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin: 4px 0;
+
+    &__label {
+        margin-bottom: 4px;
+    }
+    
+    &__helper {
+        box-sizing: border-box;
+        width: 100%;
+        display: none;
+        font-size: 14px;
+    }
+
+    &__input[type="text"],
+    &__input[type="url"],
+    &__input[type="email"],
+    &__input[type="password"],
+    &__input[type="tel"],
+    &__input[type="search"] {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: $white--light;
+        line-height: 0;
+        font-family: $font-stack;
+        padding: 4px 8px;
+        outline: none;
+        border: 1px solid $black--light;
+
+        &:hover {
+            box-shadow: 0 1px 6px 3px rgba(0, 0, 0, 0.25);
+        }
+
+        &:focus {
+            background-color: transparentize($accent, 0.7);
+        }
+
+        &.visited:invalid {
+            background-color: transparentize($error, 0.7);
+            
+            + .form-element__helper {
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                background-color: $error--dark;
+                border: 1px solid $error--dark;
+                padding: 4px 8px;
+                color: $white--extra-light;
             }
         }
     }
+
+    &__input[type="checkbox"] {
+        margin-right: 4px;
+
+        &::after {
+            display: block;
+            background-color: #fff;
+            content: "";
+            border: 1px solid $black--light;
+            width: 12px;
+            height: 12px;
+            box-shadow: inset 0 0 0 2px white;
+        }
+
+        &:checked::after {
+            background-color: $black--light;
+        }
+
+        &:hover::after {
+            border-color: $black;
+        }
+
+        &:hover:checked::after {
+            background-color: $black;
+        }
+
+        + label {
+            line-height: 19px;
+        }
+    }
+}
+
+.form-btn, .form-btn--submit {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+}
+
+.form-btn--submit {
+    margin-top: 16px;
 }

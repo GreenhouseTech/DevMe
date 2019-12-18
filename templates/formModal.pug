@@ -1,0 +1,33 @@
+//- formModal.pug
+
+block formModal
+	#modalSignup(aria-hidden=true).modal-wrapper
+		div(tabindex="-1" data-micromodal-close).modal-overlay
+			.modal(role="dialog" aria-describedby="modalDesc" aria-labeledby="modalTitle" aria-modal=true)
+				header.modal-header
+					h1#modalTitle.modal-header__title Create Account
+					button(data-micromodal-close type="button" value="cancel" aria-label="close form").btn--escape: include ../assets/icon/escape.svg
+				p.modal-desc#modalDesc Sign up to design your developer portfolio. Note that all fields are required.
+				form.form.modal-form
+					.form-element
+						label(for="newAcctEmail").form-element__label Email
+						input.form-element__input(type="email" name="email" id="newAcctEmail" required placeholder="Your desired email")
+					.form-element
+						label(for="newAcctPass1").form-element__label Password
+						input.form-element__input(type="password" name="password1" id="newAcctPass1" pattern="(?=.*[A-Z])(?=.*[0-9]).{8}" required placeholder="Secure password" aria-describedby="pass1Helper")
+						span#pass1Helper.form-element__helper Requires eight (8) characters with one (1) uppercase letter and one (1) number.
+					.form-element
+						label(for="newAcctPass2").form-element__label Confirm Password
+						input.form-element__input#newAcctPass2(type="password" name="password2" required placeholder="Same as above" aria-describedby="pass2Helper")
+						span#pass2Helper.form-element__helper Must match the first password
+					.form-element
+						input.form-element__input#captcha(type="checkbox", name="captcha" required)
+						label(for="captcha") I am not a robot
+					.form-element
+						input.form-element__input#newAcctTerms(type="checkbox", name="terms" required)
+						label(for="newAcctTerms") I agree to the <a href="/legal/terms-of-service.html">Terms of Service</a>.
+					button(type="submit" data-modal-closes="signup").btn.form-btn--submit Create my Account
+					a(href="#github").btn--mixed.btn--secondary.form-btn
+						span Sign in with
+						include ../assets/icon/github.svg
+				footer.modal-footer: small Already have an account? <a href="#login">Log in</a>.

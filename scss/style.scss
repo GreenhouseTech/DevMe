@@ -1,18 +1,15 @@
+@import 'colors';
 @import 'variables';
 
+@import 'normalize';
 @import 'global';
 
 
 @import 'partials/typography';
 @import 'partials/buttons';
 @import 'partials/form';
+@import 'partials/modal';
+@import 'partials/tooltip';
 @import 'partials/grid';
 @import 'partials/header';
 @import 'partials/footer';
-
-.test {
-    justify-self: stretch;
-    align-self: stretch;
-    background-color:steelblue;
-    opacity: 0.5;
-}

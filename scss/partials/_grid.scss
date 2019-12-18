@@ -1,7 +1,7 @@
 .wrapper, .wrapper--center {
     display: grid;
-    margin-right: 36px;
-    margin-left: 36px;
+    padding-right: 36px;
+    padding-left: 36px;
     grid-template-columns: repeat(12, 1fr);
     gap: 36px;
 

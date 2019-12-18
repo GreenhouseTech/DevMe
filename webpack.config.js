@@ -44,6 +44,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([{ from: "./assets", to: "./assets" }]),
+    new CopyWebpackPlugin([{ from: "./res", to: "./res" }]),
     new MiniCssExtractPlugin({ chunkFilename: "css/style.[contentHash].css" }),
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
