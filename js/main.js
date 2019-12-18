@@ -1,7 +1,9 @@
 require('./hamburger');
 require('./form')
 
-MicroModal.init();
+MicroModal.init({
+    awaitCloseAnimation: true
+});
 
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {

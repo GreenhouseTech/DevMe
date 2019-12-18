@@ -6,7 +6,7 @@ block formModal
 			.modal(role="dialog" aria-describedby="modalDesc" aria-labeledby="modalTitle" aria-modal=true)
 				header.modal-header
 					h1#modalTitle.modal-header__title Create Account
-					button(data-micromodal-close type="button" value="cancel" aria-label="close form").btn--escape: include ../assets/icon/escape.svg
+					button(data-micromodal-close aria-label="close form").btn--escape
 				p.modal-desc#modalDesc Sign up to design your developer portfolio. Note that all fields are required.
 				form.form.modal-form
 					.form-element
@@ -14,7 +14,7 @@ block formModal
 						input.form-element__input(type="email" name="email" id="newAcctEmail" required placeholder="Your desired email")
 					.form-element
 						label(for="newAcctPass1").form-element__label Password
-						input.form-element__input(type="password" name="password1" id="newAcctPass1" pattern="(?=.*[A-Z])(?=.*[0-9]).{8}" required placeholder="Secure password" aria-describedby="pass1Helper")
+						input.form-element__input(type="password" name="password1" id="newAcctPass1" pattern="(?=.*[A-Z])(?=.*[0-9]).{8}" required placeholder="Secure password" aria-describedby="pass1Helper" autocomplete="new-password")
 						span#pass1Helper.form-element__helper Requires eight (8) characters with one (1) uppercase letter and one (1) number.
 					.form-element
 						label(for="newAcctPass2").form-element__label Confirm Password
